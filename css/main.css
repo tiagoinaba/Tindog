@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes badge-animation {
+  0% {
+    transform: scale(3) rotate(-30deg) translate(10rem, 20rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-30deg);
+  }
+}
+@keyframes swipeLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: rotate(-45deg) translate(-45rem, -15rem);
+  }
+}
+@keyframes swipeRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: rotate(45deg) translate(45rem, 15rem);
+  }
+}
+html {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.badge {
+  position: absolute;
+  width: 23.4rem;
+  transform: rotate(-30deg);
+  inset: 5.1rem auto auto 1.4rem;
+  display: none;
+  backface-visibility: hidden;
+}
+
+.badge--visible {
+  display: block;
+  animation-name: badge-animation;
+  animation-duration: 0.7s;
+}
+
+main {
+  padding: 0.8rem;
+}
+main .profile {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  max-width: 600px;
+}
+main .profile .swipeLeft {
+  opacity: 0;
+  transform-origin: 50% bottom;
+  animation: swipeLeft 0.5s ease-in-out;
+}
+main .profile .swipeRight {
+  opacity: 0;
+  transform-origin: 125% bottom;
+  animation: swipeRight 0.5s ease-in-out;
+}
+main .profile .next-dog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+main .profile .profile__image {
+  width: 100%;
+  border-radius: 1.5rem;
+}
+main .profile .profile__information {
+  position: absolute;
+  bottom: 1.6rem;
+  left: 1.2rem;
+  color: white;
+  text-align: start;
+}
+main .profile .profile__information .profile__name {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+main .profile .profile__information .profile__description {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+main .button-container {
+  padding: 2.4rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 8.3rem;
+}
+main .button-container .btn-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1rem 2rem #E9E9EA;
+  width: 9.2rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+main .button-container .btn-bg .heart-icon {
+  transform: translateY(0.3rem);
+}
+main .button-container .btn-heart:hover {
+  background-color: #DBFFF4;
+}
+main .button-container .btn-reject:hover {
+  background-color: #FFE7EF;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.4rem 1.8rem;
+}
+header .logo {
+  width: 8.4rem;
+}
+header .icon {
+  align-self: center;
+  width: 3.4rem;
+}
+
+body {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
+}/*# sourceMappingURL=main.css.map */

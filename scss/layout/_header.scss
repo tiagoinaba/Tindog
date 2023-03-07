@@ -1,0 +1,14 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4rem 1.8rem;
+
+    .logo {
+        width: 8.4rem;
+    }
+
+    .icon {
+        align-self: center;
+        width: 3.4rem;
+    }
+}

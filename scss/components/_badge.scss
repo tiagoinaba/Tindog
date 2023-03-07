@@ -1,0 +1,14 @@
+.badge {
+    position: absolute;
+    width: 23.4rem;
+    transform: rotate(-30deg);
+    inset: 5.1rem auto auto 1.4rem;
+    display: none;
+    backface-visibility: hidden;
+}
+
+.badge--visible {
+    display: block;
+    animation-name: badge-animation;
+    animation-duration: .7s;
+}

@@ -1,0 +1,33 @@
+@keyframes badge-animation {
+    0% {
+        transform: scale(3) rotate(-30deg) translate(10rem, 20rem);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(-30deg);
+    }
+}
+
+@keyframes swipeLeft {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: rotate(-45deg) translate(-45rem, -15rem);
+    }
+}
+
+@keyframes swipeRight {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: rotate(45deg) translate(45rem, 15rem);
+    }
+}

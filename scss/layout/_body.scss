@@ -1,0 +1,86 @@
+main {
+    padding: .8rem;
+    .profile {
+        position: relative;
+        margin: 0 auto;
+        border-radius: 1.5rem;
+        max-width: 600px;
+
+        .swipeLeft {
+            opacity: 0;
+            transform-origin: 50% bottom;
+            animation: swipeLeft .5s ease-in-out; 
+        }
+
+        .swipeRight {
+            opacity: 0;
+            transform-origin: 125% bottom;
+            animation: swipeRight .5s ease-in-out;
+        }
+
+        .next-dog {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .profile__image {
+            width: 100%;
+            border-radius: 1.5rem;
+        }
+
+        .profile__information {
+            position: absolute;
+            bottom: 1.6rem;
+            left: 1.2rem;
+            color: white;
+            text-align: start;
+
+            .profile__name {
+                font-size: 3.2rem;
+                font-weight: 600;
+            }
+
+            .profile__description {
+                font-size: 2.4rem;
+                font-weight: 400;
+            }
+        }
+
+    }
+
+    .button-container {
+        padding: 2.4rem 0;
+        display: flex;
+        justify-content: center;
+        gap: 8.3rem;
+
+        .btn-bg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 1rem 2rem #E9E9EA;
+            width: 9.2rem;
+            aspect-ratio: 1;
+            cursor: pointer;
+            transition: background-color .4s;
+
+            
+
+            .heart-icon {
+                transform: translateY(.3rem);
+            }
+        }
+
+        .btn-heart:hover {
+            background-color: #DBFFF4;
+        }
+        
+        .btn-reject:hover {
+            background-color: #FFE7EF;
+        }
+    }
+}
